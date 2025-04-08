@@ -1,0 +1,252 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background: black;
+    border-bottom: 2px solid orange;
+}
+
+nav a {
+    color: white;
+    background: orange;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ff8c00;
+    transform: translateY(-2px);
+}
+
+.navigational {
+    display: inline;
+    margin: 0;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 60px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    display: inline-block;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.hyphen {
+    color: red;
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.intro-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.welcome {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: orange;
+}
+
+.intro {
+    color: #333;
+    background: white;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    border-left: 5px solid orange;
+    text-align: left;
+}
+
+.intro strong {
+    color: #000;
+}
+
+/* Trust Badge */
+.trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+.trust-badge svg {
+    filter: drop-shadow(0 2px 4px rgba(76, 175, 80, 0.3));
+}
+
+.trust-badge span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* CTA Button */
+.cta-container {
+    margin: 30px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: orange;
+    color: black;
+    padding: 15px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+}
+
+.cta-button:hover {
+    background: #ff8c00;
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.4);
+}
+
+.cta-button i {
+    margin-left: 8px;
+}
+
+/* Featured Products */
+.featured-products {
+    margin: 60px auto;
+    max-width: 1200px;
+}
+
+.featured-products h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    color: orange;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.product-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.product-card h4 {
+    color: #333;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.price {
+    color: orange;
+    font-weight: bold;
+    padding: 0 15px 15px;
+    font-size: 20px;
+}
+
+/* Footer */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+    border-top: 1px solid orange;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+        padding: 15px 25px;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .intro {
+        padding: 20px;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+main {
+    animation: fadeIn 0.8s ease-out;
+}
