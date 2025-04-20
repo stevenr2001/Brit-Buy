@@ -1,0 +1,94 @@
+/* Base Styles */
+.background {
+    background-image: url(/home/steven/Projects/britbuyproject/resources/backgroundimage.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    background: black;
+    border-bottom: 2px solid orange;
+}
+
+nav a {
+    color: white;
+    background: orange;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #ff8c00;
+    transform: translateY(-2px);
+}
+nav a:active {
+    border: 5px solid maroon;
+}
+nav a.current {
+    font-size: 22px;
+    background-color: maroon;
+    font-weight: bolder;
+
+}
+nav a.current:hover {
+    background: grey;
+}
+
+.navigational {
+    display: inline;
+    margin: 0;
+}
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    display: center;
+    font-size: 50px;
+
+}
+header section {
+    display: inline;
+    
+}
+
+
+h1 {
+    color: white;
+    font-size: 60px;
+    margin: 0 auto;
+    font-family: Georgia, serif;
+    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
+    display: inline-block;
+    padding: 20px 40px;
+    position: relative;
+}
+
+.hyphen {
+    color: red;
+    font-weight: bold;
+}
